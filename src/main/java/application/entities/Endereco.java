@@ -17,6 +17,10 @@ public class Endereco {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @ManyToOne
+    @JoinColumn(name = "tb_id_pessoa")
+    private Pessoa pessoa;
+
     @Column(name = "tb_logradouro")
     private String logradouro;
 
@@ -24,13 +28,14 @@ public class Endereco {
     private String cep;
 
     @Column(name = "tb_numero")
-    private String numero;
+    private Integer numero;
 
     @Column(name = "tb_cidade")
     private String cidade;
 
-    @ManyToOne
-    @JsonIgnore
-    @JoinColumn(name = "id_pessoa")
-    private Pessoa pessoa;
+    @Column(name = "tb_endereco_princial")
+    private boolean enderecoPrincial;
+
+
+
 }

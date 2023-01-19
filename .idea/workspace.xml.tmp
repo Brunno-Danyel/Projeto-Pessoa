@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9b235ca1-a047-4da0-a97e-9f20a06172e8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/Endereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/entities/Endereco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/entities/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/exception/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/controller/EnderecoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/controller/EnderecoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/controller/PessoaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/controller/PessoaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/dto/EnderecoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/dto/EnderecoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/dto/PessoaDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/dto/PessoaDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/entities/Endereco.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/entities/Endereco.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/entities/Pessoa$PessoaBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/entities/Pessoa$PessoaBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/entities/Pessoa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/entities/Pessoa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/exception/ControllerException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/exception/ControllerException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/exception/ResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/services/EnderecoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/services/EnderecoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/services/PessoaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/services/PessoaService.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isDesignerTabSelected" value="false" />
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KQgcB6IprLPfw0dZkF381ahqQP" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Brunno/ideaIC-2022.2.2.win/workSpace - Intellij/GerenciadorTarefas&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="application.exception" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ProjetoPessoaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.ProjetoPessoaApplication" />
+      <module name="Projeto-Pessoa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ProjetoPessoaApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b235ca1-a047-4da0-a97e-9f20a06172e8" name="Changes" comment="" />
+      <created>1673912300973</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673912300973</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

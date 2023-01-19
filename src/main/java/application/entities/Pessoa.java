@@ -2,15 +2,19 @@ package application.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Entity(name = "tb_Pessoa")
 public class Pessoa {
 
@@ -24,7 +28,8 @@ public class Pessoa {
     @Column(name = "tb_data_Nascimento")
     private String dataNascimento;
 
-    @OneToMany
+    @OneToMany(mappedBy = "pessoa")
     @JsonIgnore
-    private Set<Endereco> enderecos;
+    private Set<Endereco> endereco;
+
 }
