@@ -1,5 +1,6 @@
 package application.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -15,7 +17,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Entity(name = "tb_Pessoa")
+@Entity(name = "tb_pessoa")
 public class Pessoa {
 
     @Id
@@ -25,7 +27,7 @@ public class Pessoa {
     @Column(name = "tb_nome")
     private String nome;
 
-    @Column(name = "tb_data_Nascimento")
+    @Column(name = "tb_data_nascimento")
     private String dataNascimento;
 
     @OneToMany(mappedBy = "pessoa")

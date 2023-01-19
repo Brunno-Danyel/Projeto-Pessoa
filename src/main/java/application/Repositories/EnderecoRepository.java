@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-public interface EnderecoRespository extends JpaRepository<Endereco, Long> {
+public interface EnderecoRepository extends JpaRepository<Endereco, Long> {
 
-        Optional<List<Endereco>> findByPessoa(Pessoa pessoa);
+    Optional<List<Endereco>> findByPessoa(Pessoa pessoa);
 }

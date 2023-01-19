@@ -27,6 +27,13 @@ public class ControllerException {
         return new ApiErrors(mensagemErro);
     }
 
+    @ExceptionHandler(PessoaNaoEncontradaException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ApiErrors handleRegraNegocioException(PessoaNaoEncontradaException ex) {
+        String mensagemErro = ex.getMessage();
+        return new ApiErrors(mensagemErro);
+    }
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ApiErrors handleMethodNotValidException(MethodArgumentNotValidException ex) {

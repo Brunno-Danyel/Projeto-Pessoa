@@ -1,10 +1,10 @@
 package application.services;
 
-import application.Repositories.EnderecoRespository;
+import application.Repositories.EnderecoRepository;
 import application.dto.EnderecoDTO;
 import application.entities.Endereco;
 import application.entities.Pessoa;
-import application.exception.PessoaException;
+import application.exception.PessoaNaoEncontradaException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ import java.util.Optional;
 public class EnderecoService {
 
     @Autowired
-    private EnderecoRespository enderecoRespository;
+    private EnderecoRepository enderecoRepository;
 
     @Autowired
     private PessoaService pessoaService;
@@ -26,12 +26,11 @@ public class EnderecoService {
 
         Endereco endereco = enderecoDTO.fromDTO(enderecoDTO);
         endereco.setPessoa(pessoa);
-        return enderecoRespository.save(endereco);
+        return enderecoRepository.save(endereco);
     }
 
-    public Optional<List<Endereco>> consultarEnderecosPessoa(Pessoa pessoa) {
-        return Optional.ofNullable(enderecoRespository.findByPessoa(pessoa)
-                .orElseThrow(() -> new PessoaException("Pessoa não encontrada na base de dados!")));
+    public Optional<List<Endereco>> buscarEnderecosPessoa(Pessoa pessoa) {
+        return Optional.ofNullable(enderecoRepository.findByPessoa(pessoa).orElseThrow(() -> new PessoaNaoEncontradaException()));
     }
 
 }

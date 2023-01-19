@@ -1,14 +1,12 @@
 package application.services;
 
-import application.Repositories.EnderecoRespository;
+import application.Repositories.EnderecoRepository;
 import application.Repositories.PessoaRepository;
 import application.dto.PessoaDTO;
 import application.entities.Pessoa;
-import application.exception.PessoaException;
+import application.exception.PessoaNaoEncontradaException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.HttpClientErrorException;
 
 import java.util.List;
 
@@ -19,7 +17,7 @@ public class PessoaService {
     private PessoaRepository pessoaRepository;
 
     @Autowired
-    private EnderecoRespository enderecoRespository;
+    private EnderecoRepository enderecoRepository;
 
     public Pessoa criarPessoa(PessoaDTO pessoaDTO) {
         Pessoa pessoa = pessoaDTO.fromDTO(pessoaDTO);
@@ -27,8 +25,7 @@ public class PessoaService {
     }
 
     public Pessoa consultarPessoa(Long idPessoa) {
-        return pessoaRepository.findById(idPessoa)
-                .orElseThrow(() -> new PessoaException("Pessoa não encontrada na base de dados!"));
+        return pessoaRepository.findById(idPessoa).orElseThrow(() -> new PessoaNaoEncontradaException());
     }
 
     public List<Pessoa> listarPessoas() {

@@ -3,7 +3,7 @@ package application.controller;
 import application.Repositories.PessoaRepository;
 import application.dto.PessoaDTO;
 import application.entities.Pessoa;
-import application.exception.PessoaException;
+import application.exception.PessoaNaoEncontradaException;
 import application.services.PessoaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import static org.springframework.http.HttpStatus.*;
+
+import static org.springframework.http.HttpStatus.CREATED;
+import static org.springframework.http.HttpStatus.NO_CONTENT;
 
 @RestController
 @RequestMapping("api/pessoa")
@@ -36,7 +38,7 @@ public class PessoaController {
             pessoa.setId(idPessoa);
             pessoaRepository.save(pessoa);
             return pessoaExistente;
-        }).orElseThrow(() -> new PessoaException("Pessoa não encontrada!"));
+        }).orElseThrow(() -> new PessoaNaoEncontradaException());
 
     }
 
