@@ -1,12 +1,17 @@
 package application.controller;
 
+import application.Repositories.PessoaRepository;
+import application.dto.PessoaDTO;
 import application.entities.Pessoa;
+import application.exception.PessoaException;
 import application.services.PessoaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
+import static org.springframework.http.HttpStatus.*;
 
 @RestController
 @RequestMapping("api/pessoa")
@@ -14,16 +19,25 @@ public class PessoaController {
 
     @Autowired
     private PessoaService pessoaService;
+    @Autowired
+    private PessoaRepository pessoaRepository;
 
     @PostMapping
-    public Pessoa criarPessoa(@RequestBody Pessoa pessoa) {
-        return pessoaService.criarPessoa(pessoa);
+    @ResponseStatus(CREATED)
+    public Pessoa criarPessoa(@RequestBody @Valid PessoaDTO pessoaDTO) {
+        return pessoaService.criarPessoa(pessoaDTO);
     }
 
     @PutMapping("editar/{idPessoa}")
-    public ResponseEntity<Pessoa> editarPessoa(@PathVariable Long idPessoa, @RequestBody Pessoa pessoa) {
-        Pessoa pessoaObj = pessoaService.editarPessoa(idPessoa, pessoa);
-        return ResponseEntity.ok().body(pessoaObj);
+    @ResponseStatus(NO_CONTENT)
+    public void editarPessoa(@PathVariable Long idPessoa, @RequestBody Pessoa pessoa) {
+
+        pessoaRepository.findById(idPessoa).map(pessoaExistente -> {
+            pessoa.setId(idPessoa);
+            pessoaRepository.save(pessoa);
+            return pessoaExistente;
+        }).orElseThrow(() -> new PessoaException("Pessoa não encontrada!"));
+
     }
 
     @GetMapping("consultar/{idPessoa}")
