@@ -1,7 +1,6 @@
 package application.exception;
 
 import application.ApiErrors;
-import application.entities.Endereco;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -16,14 +15,14 @@ public class ControllerException {
 
     @ExceptionHandler(PessoaException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ApiErrors handlePessoaException(PessoaException ex) {
+    public ApiErrors handleRegraNegocioException(PessoaException ex) {
         String mensagemErro = ex.getMessage();
         return new ApiErrors(mensagemErro);
     }
 
     @ExceptionHandler(EnderecoException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ApiErrors handleEnderecoException(EnderecoException ex) {
+    public ApiErrors handleRegraNegocioException(EnderecoException ex) {
         String mensagemErro = ex.getMessage();
         return new ApiErrors(mensagemErro);
     }

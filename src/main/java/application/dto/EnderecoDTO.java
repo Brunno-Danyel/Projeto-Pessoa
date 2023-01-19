@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
@@ -14,7 +15,7 @@ import javax.validation.constraints.NotNull;
 public class EnderecoDTO {
 
     @NotNull(message = "{campo.pessoa}")
-    private Long idPessoa;
+    private Long pessoa;
 
     @NotEmpty(message = "{campo.logradouro}")
     private String logradouro;
@@ -28,6 +29,7 @@ public class EnderecoDTO {
     @NotEmpty(message = "{campo.cidade}")
     private String cidade;
 
+    private boolean enderecoPrincipal;
 
     public static Endereco fromDTO(EnderecoDTO enderecoDTO){
         Endereco endereco = new Endereco();
@@ -35,6 +37,7 @@ public class EnderecoDTO {
         endereco.setCep(enderecoDTO.getCep());
         endereco.setNumero(enderecoDTO.getNumero());
         endereco.setCidade(enderecoDTO.getCidade());
+        endereco.setEnderecoPrincial(enderecoDTO.isEnderecoPrincipal());
         return endereco;
     }
 }

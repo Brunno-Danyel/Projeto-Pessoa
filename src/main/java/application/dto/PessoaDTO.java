@@ -18,9 +18,6 @@ public class PessoaDTO {
     @NotEmpty(message = "{campo.dataNascimento}")
     private String dataNascimento;
 
-    private Long idEnderecoPrincipal;
-
-
     public static Pessoa fromDTO(PessoaDTO pessoaDTO){
         Pessoa pessoa = new Pessoa();
         pessoa.setNome(pessoaDTO.getNome());
