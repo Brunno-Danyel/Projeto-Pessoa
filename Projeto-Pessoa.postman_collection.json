@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "4d2b8dd3-8b8d-44db-a002-01d47f8d2c99",
+		"name": "Projeto-Pessoa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pessoa",
+			"item": [
+				{
+					"name": "Pessoa - Criar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Teste Pessoa\",\r\n    \"dataNascimento\": \"19-01-2023\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/pessoa",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pessoa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pessoa - Editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Teste Pessoa 2 Atualizado\",\r\n    \"dataNascimento\": \"19-03-2023\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/pessoa/editar/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pessoa",
+								"editar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pessoa  - Consultar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/pessoa/consultar/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pessoa",
+								"consultar",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pessoa - Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/pessoa/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pessoa",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endereço",
+			"item": [
+				{
+					"name": "Endereco - Criar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pessoa\": 1,\r\n    \"logradouro\": \"Endereco Teste\",\r\n    \"cep\": \"12345678\",\r\n    \"numero\": 149,\r\n    \"cidade\": \"Endereco principal\",\r\n    \"enderecoPrincipal\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/endereco",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"endereco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Endereços - Pessoa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/endereco/pessoa/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"endereco",
+								"pessoa",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
